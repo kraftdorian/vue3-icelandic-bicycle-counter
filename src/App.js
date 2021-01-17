@@ -1,3 +1,3 @@
-const App = () => {};
+const App = () => <>App</>;
 
 export default App;
