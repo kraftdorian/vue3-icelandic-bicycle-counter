@@ -1,4 +1,3 @@
-<script>
 import { ref, computed, onMounted } from "vue";
 
 import CounterSection from "@/components/CounterSection";
@@ -33,4 +32,3 @@ export default {
     );
   }
 };
-</script>
