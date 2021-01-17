@@ -1,8 +1,3 @@
-<template>
-  <CounterSection headingText="Daily entries" :count="dayCount" />
-  <CounterSection headingText="Year entries" :count="yearCount" />
-</template>
-
 <script>
 import { ref, computed, onMounted } from "vue";
 
@@ -28,6 +23,14 @@ export default {
     onMounted(getCounter);
 
     return { dayCount, yearCount };
+  },
+  render({ dayCount, yearCount }) {
+    return (
+      <>
+        <CounterSection headingText="Daily entries" count={dayCount} />
+        <CounterSection headingText="Year entries" count={yearCount} />
+      </>
+    );
   }
 };
 </script>
