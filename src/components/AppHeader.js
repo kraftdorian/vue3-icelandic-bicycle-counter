@@ -1,11 +1,10 @@
 import AppHeading from "@/components/AppHeading";
-
-import logo from "@/assets/logo.svg";
+import AppLogo from "@/components/AppLogo";
 
 const AppHeader = () => {
   return (
     <header className="app__header">
-      <img className="header__logo" src={logo} />
+      <AppLogo />
       <AppHeading level={1}>Icelandic Bicycle Counter</AppHeading>
     </header>
   );
