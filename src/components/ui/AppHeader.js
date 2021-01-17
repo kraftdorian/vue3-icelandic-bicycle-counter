@@ -7,7 +7,7 @@ const AppHeader = () => {
   return (
     <header className="app__header">
       <AppLogo />
-      <AppHeading level={1}>Icelandic Bicycle Counter</AppHeading>
+      <AppHeading>Icelandic Bicycle Counter</AppHeading>
     </header>
   );
 };
