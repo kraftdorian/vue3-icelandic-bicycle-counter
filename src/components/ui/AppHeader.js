@@ -1,5 +1,5 @@
-import AppHeading from "@/components/AppHeading";
-import AppLogo from "@/components/AppLogo";
+import AppHeading from "@/components/ui/AppHeading";
+import AppLogo from "@/components/ui/AppLogo";
 
 import "@/stylesheets/components/header.scss";
 
