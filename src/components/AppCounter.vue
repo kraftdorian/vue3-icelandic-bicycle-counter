@@ -1,10 +1,10 @@
 <template>
   <AppSection>
-    <AppHeading level="2">Daily entries</AppHeading>
+    <AppHeading :level="2">Daily entries</AppHeading>
     <p>{{ dayCount }}</p>
   </AppSection>
   <AppSection>
-    <AppHeading level="2">Year entries</AppHeading>
+    <AppHeading :level="2">Year entries</AppHeading>
     <p>{{ yearCount }}</p>
   </AppSection>
 </template>

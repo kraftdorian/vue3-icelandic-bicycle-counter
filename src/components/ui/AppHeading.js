@@ -8,4 +8,14 @@ const AppHeading = ({ level }, context) => {
   );
 };
 
+AppHeading.props = {
+  level: {
+    type: Number,
+    default: 1,
+    validator(value) {
+      return +value > 0 && +value <= 6;
+    }
+  }
+};
+
 export default AppHeading;
