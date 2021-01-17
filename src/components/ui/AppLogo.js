@@ -17,7 +17,14 @@ export default {
   },
   render({ logo }) {
     return (
-      <img className="app__logo" src={logo} alt="Logo" width={62} height={66} />
+      <img
+        className="app__logo"
+        src={logo}
+        alt="Logo"
+        width={62}
+        height={66}
+        draggable={false}
+      />
     );
   }
 };
