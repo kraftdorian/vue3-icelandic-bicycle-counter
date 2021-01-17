@@ -1,24 +1,17 @@
 <template>
-  <AppSection>
-    <AppHeading :level="2">Daily entries</AppHeading>
-    <p>{{ dayCount }}</p>
-  </AppSection>
-  <AppSection>
-    <AppHeading :level="2">Year entries</AppHeading>
-    <p>{{ yearCount }}</p>
-  </AppSection>
+  <CounterSection headingText="Daily entries" :count="dayCount" />
+  <CounterSection headingText="Year entries" :count="yearCount" />
 </template>
 
 <script>
 import { ref, computed, onMounted } from "vue";
 
-import AppSection from "@/components/ui/AppSection";
-import AppHeading from "@/components/ui/AppHeading";
+import CounterSection from "@/components/CounterSection";
 
 import counterApi from "@/api/counterApi";
 
 export default {
-  components: { AppSection, AppHeading },
+  components: { CounterSection },
   setup() {
     let counter = ref({});
 
