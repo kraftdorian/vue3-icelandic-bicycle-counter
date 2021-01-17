@@ -1,4 +1,4 @@
-import AppHeader from "@/components/AppHeader";
+import AppHeader from "@/components/ui/AppHeader";
 
 const App = () => (
   <>
