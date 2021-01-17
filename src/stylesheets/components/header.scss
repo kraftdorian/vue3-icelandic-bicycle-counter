@@ -1,0 +1,11 @@
+.app__header {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #BFDBFE;
+  color: #1E3A8A;
+
+  .app__heading {
+    margin: 0.5rem 1rem;
+  }
+}
