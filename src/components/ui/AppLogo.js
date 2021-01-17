@@ -1,9 +1,23 @@
+import { ref, onMounted } from "vue";
+
 import "@/stylesheets/components/logo.scss";
 
-import logo from "@/assets/logo.svg";
+export default {
+  setup() {
+    let logo = ref(null);
 
-const AppLogo = () => (
-  <img className="app__logo" src={logo} alt="Logo" width={62} height={66} />
-);
+    const getLogo = async () => {
+      const img = await import(/* webpackMode: 'lazy' */ "@/assets/logo.svg");
+      logo.value = img.default;
+    };
 
-export default AppLogo;
+    onMounted(getLogo);
+
+    return { logo };
+  },
+  render({ logo }) {
+    return (
+      <img className="app__logo" src={logo} alt="Logo" width={62} height={66} />
+    );
+  }
+};
