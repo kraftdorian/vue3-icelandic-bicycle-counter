@@ -21,10 +21,13 @@ export default {
   components: { AppSection, AppHeading },
   setup() {
     let counter = ref({});
+
     const computeKeyName = keyName =>
       counter.value.results?.reduce((p, n) => p + +n[keyName], 0);
+
     const dayCount = computed(() => computeKeyName("DayCount"));
     const yearCount = computed(() => computeKeyName("YearCount"));
+
     const getCounter = async () => {
       counter.value = await counterApi.getCounter();
     };
